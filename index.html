@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Anshika personal Portfolio</title>
+<body>
+  <header>
+    <div class="logo"><img src="portfoliologo.jpg"></div>
+    <nav>
+      <ul>
+        <li><a href="#">HOME</a></li>
+        <li><a href="#services">SERVICES</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Hello, I'm Anshika</h1>
+    <p>Creative Developer & Designer passionate about web experiences.</p>
+    <img src="herobanner1.jpg" alt="Hero Banner" />
+    <button onclick="scrollToContact()">Get in Touch</button>
+  </section>
+
+  <section id="services" class="services">
+    <div class="card">
+      <h3>WEB DESIGN</h3>
+      <p>Modern and user-friendly designs tailored to your brand.</p>
+    </div>
+    <div class="card">
+      <h3>DEVELOPMENT</h3>
+      <p>Responsive websites built with clean, efficient code.</p>
+    </div>
+    <div class="card">
+      <h3>API INTEGRATION</h3>
+      <p>Consumes RESTful APIs and handles data fetching</p>
+    </div>
+    <div class="card">
+      <h3>SEO Optimization</h3>
+      <p>Improve your visibility and ranking on search engines.</p>
+  </div>
+  </section>
+
+  <section class="about">
+    <img src="anshikaimg.jpg" alt="Anshika's Photo" />
+    <div>
+      <h2>WHY CHOOSE ME?</h2>
+     <p>I combine creativity, technology, and strategy to build websites that drive results. With a keen eye for design and a developer's mindset, I ensure every project is both beautiful and functional. and I use various frontend technologies to acheive that such as HTML, CSS, Javascript, Bootstrap and responsive web design.</p>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contact Me</h2>
+    <form>
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Anshika. All rights reserved.</p>
+  </footer>
+  <srcipt src="script.js"></srcipt>
+    </body>
+</html>
