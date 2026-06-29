@@ -1,4 +1,4 @@
-<script>
+
     function smoothScrollTo(id) {
       const el = document.getElementById(id);
       if (!el) return;
@@ -64,4 +64,3 @@
         });
       });
     }
-  </script>
