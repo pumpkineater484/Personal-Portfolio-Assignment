@@ -3,67 +3,123 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="style.css" />
-  <title>Anshika personal Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <title>Anshika Personal Portfolio</title>
+  
+</head>
 <body>
+
   <header>
-    <div class="logo"><img src="portfoliologo.jpg"></div>
-    <nav>
+    <div class="logo"><img src="portfoliologo-new.png" alt="Logo"></div>
+    <div class="hamburger" onclick="toggleNav()" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </div>
+    <nav id="main-nav">
       <ul>
-        <li><a href="#">HOME</a></li>
+        <li><a href="#hero-top">HOME</a></li>
         <li><a href="#services">SERVICES</a></li>
         <li><a href="#contact">CONTACT</a></li>
+        <li><a href="#projects">PROJECTS</a></li>
       </ul>
     </nav>
   </header>
 
-  <section class="hero">
+  <section class="hero" id="hero-top">
     <h1>Hello, I'm Anshika</h1>
     <p>Creative Developer & Designer passionate about web experiences.</p>
     <img src="herobanner1.jpg" alt="Hero Banner" />
-    <button onclick="scrollToContact()">Get in Touch</button>
+    <button onclick="smoothScrollTo('contact')">Get in Touch</button>
   </section>
 
   <section id="services" class="services">
-    <div class="card">
+    <div class="services-card reveal stagger-1">
       <h3>WEB DESIGN</h3>
       <p>Modern and user-friendly designs tailored to your brand.</p>
     </div>
-    <div class="card">
+    <div class="services-card reveal stagger-2">
       <h3>DEVELOPMENT</h3>
       <p>Responsive websites built with clean, efficient code.</p>
     </div>
-    <div class="card">
+    <div class="services-card reveal stagger-3">
       <h3>API INTEGRATION</h3>
-      <p>Consumes RESTful APIs and handles data fetching</p>
+      <p>Consumes RESTful APIs and handles data fetching.</p>
     </div>
-    <div class="card">
-      <h3>SEO Optimization</h3>
+    <div class="services-card reveal stagger-4">
+      <h3>SEO OPTIMIZATION</h3>
       <p>Improve your visibility and ranking on search engines.</p>
-  </div>
+    </div>
   </section>
 
   <section class="about">
-    <img src="anshikaimg.jpg" alt="Anshika's Photo" />
-    <div>
+    <img src="anshikaimg.jpg" alt="Anshika's Photo" class="reveal-left" />
+    <div class="reveal-right">
       <h2>WHY CHOOSE ME?</h2>
-     <p>I combine creativity, technology, and strategy to build websites that drive results. With a keen eye for design and a developer's mindset, I ensure every project is both beautiful and functional. and I use various frontend technologies to acheive that such as HTML, CSS, Javascript, Bootstrap and responsive web design.</p>
+      <p>I combine creativity, technology, and strategy to build websites that drive results. With a keen eye for design and a developer's mindset, I ensure every project is both beautiful and functional. I use various frontend technologies to achieve that such as HTML, CSS, JavaScript, Bootstrap and responsive web design.</p>
     </div>
   </section>
 
-  <section id="contact" class="contact">
-    <h2>Contact Me</h2>
-    <form>
-      <input type="text" name="name" placeholder="Your Name" required />
-      <input type="email" name="email" placeholder="Your Email" required />
-      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
+  <section class="my-projects" id="projects">
+    <h1 class="reveal">Projects I have worked on</h1>
+    <div class="projects-grid">
+
+      <div class="project-card reveal stagger-1">
+        <div class="card-inner">
+          <div class="card-front"><img src="wc-hero-page.png" alt="WellConnect platform"></div>
+          <div class="card-back">
+            <h4>WellConnect Platform</h4>
+            <p>A corporate health insurance servicing and wellness platform connecting HR, employees, servicing team, and wellness support in one digital ecosystem.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card reveal stagger-2">
+        <div class="card-inner">
+          <div class="card-front"><img src="super-console.png" alt="Super Console admin panel"></div>
+          <div class="card-back">
+            <h4>Super Console</h4>
+            <p>A master admin panel where the internal team can control, monitor, configure, and manage the entire system across multiple clients, companies, and modules.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card reveal stagger-3">
+        <div class="card-inner">
+          <div class="card-front app-card"><img src="employee-app-phone.jpeg" alt="Employee app"></div>
+          <div class="card-back">
+            <h4>WellConnect App</h4>
+            <p>Designed for employees to manage health insurance benefits, health cards, claims, family details, and wellness services through one easy digital interface.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="techstack">
+    <h1 class="reveal">Tech Stack</h1>
+    <div class="tech-icons">
+      <div class="reveal stagger-1"><i class="fa-brands fa-html5"></i></div>
+      <div class="reveal stagger-2"><i class="fa-brands fa-css3-alt"></i></div>
+      <div class="reveal stagger-3"><i class="fa-brands fa-react"></i></div>
+      <div class="reveal stagger-4"><i class="fa-brands fa-square-js"></i></div>
+    </div>
+  </section>
+
+  <section class="message-section">
+    <h2 id="contact" class="reveal">CONTACT ME</h2>
+    <form id="contact-form" class="reveal">
+      <input type="text" id="name" placeholder="Your Name" required>
+      <input type="email" id="email" placeholder="Your Email" required>
+      <textarea id="message" placeholder="Your Message" required></textarea>
+      <button id="send-btn" type="submit">Send Message</button>
     </form>
   </section>
 
   <footer>
-    <p>&copy; 2025 Anshika. All rights reserved.</p>
+    <p>&copy; 2025 Anshikacodes. All rights reserved.</p>
   </footer>
-  <srcipt src="script.js"></srcipt>
-    </body>
+
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="script.js"></script>
+</body>
 </html>
